@@ -1,0 +1,58 @@
+
+# Personal folder/nav shortcuts
+alias lipa='cd ~/dev/LowesConsumer/LowesConsumeriPhoneApp/'
+alias lmdl='cd ~/dev/LowesConsumer/LowesConsumeriPhoneModel/'
+alias lrd='cd ~/dev/LowesConsumerRedesign/Lowes/'
+alias bcpd='cd ~/dev/BCP/mobile-app-properties/'
+alias bcpp='cd ~/dev/BCP/prod-config/mobile-app-properties/'
+alias olws='open ~/dev/LowesConsumerRedesign/Lowes/Lowes.xcworkspace'
+alias lws='cd ~/dev/LowesConsumerRedesign/Lowes/'
+
+# System stuff
+alias ld="ls -ld */"   # List in long format, only directories
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ql='qlmanage -p' # QuickLook
+alias tp='top -o vsize' # Top processes
+
+# dir listing/traversal
+
+LS_COLORS=`is-supported "ls --color" --color -G`
+LS_TIMESTYLEISO=`is-supported "ls --time-style=long-iso" --time-style=long-iso`
+LS_GROUPDIRSFIRST=`is-supported "ls --group-directories-first" --group-directories-first`
+
+# List in long format, include dotfiles, use unit suffixes, all entries
+alias l="ls -lahA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
+# Long format, all entries
+alias ll="ls -lA $LS_COLORS"
+# List in long format, include dotfiles, use unit suffixes, all entries, sort descending by time modified
+alias lt="ls -lhAtr $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
+# List directories with total sizes
+alias ld="ls -ld $LS_COLORS */"
+# Sort files by size in a directory
+alias lss='ls -lhs'
+
+# Git stuff
+alias gfo='git fetch origin'
+alias gpr='git pull origin dev/release/3.5.0'
+alias gcr='git checkout dev/release/3.5.0'
+alias gcp='git checkout dev/release/3.5.0;git pull origin dev/release/3.5.0'
+
+# Xcode
+alias dvt='defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID'
+alias compat='dvt | pbcopy; dvt'
+alias plugindir='open ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/'
+
+# Helpful
+alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+
+# Show/hide desktop icons
+alias desktopshow="defaults write com.apple.finder CreateDesktop -bool true && killfinder"
+alias desktophide="defaults write com.apple.finder CreateDesktop -bool false && killfinder"
+
+# Clean up LaunchServices to remove duplicates in the "Open With" menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# Empty trash on mounted volumes and main HDD, and clear system logs
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
