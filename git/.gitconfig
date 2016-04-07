@@ -54,6 +54,9 @@
 	b = "branch"
 	co = "checkout"
 	s = "status"
+	fo = "fetch origin"
+	c = "commit"
+	m = "merge"
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f

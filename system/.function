@@ -57,3 +57,8 @@ function tre() {
 function prepend-path() {
     [ -d $1 ] && PATH="$1:$PATH"
 }
+
+function_exists() {
+    declare -f -F $1 > /dev/null
+    return $?
+}
