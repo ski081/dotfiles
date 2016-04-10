@@ -182,6 +182,9 @@ defaults write com.apple.dock autohide -bool true
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
+# Set hide/show speed of the dock to a higher rate
+defaults write com.apple.dock autohide-time-modifier -float 0.12
+
 ###############################################################################
 # Dashboard                                                                   #
 ###############################################################################
