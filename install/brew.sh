@@ -17,7 +17,6 @@ apps=(
   imagemagick
   mackup
   python
-  svn
   tree
   wget
   wifi-password

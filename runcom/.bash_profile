@@ -14,6 +14,8 @@ for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,compl
     [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
-# Clean up
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Clean up
 unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
