@@ -150,8 +150,8 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 # Use AirDrop over every interface.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-# Always open everything in Finder's list view.
-# Use list view in all Finder windows by default
+# Always open everything in Finder's column view.
+# Use column view in all Finder windows by default
 # Four-letter codes for the view modes:
 # 	- List: 			`Nlsv`
 # 	- Icon: 			`icnv`
@@ -163,7 +163,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Enable the MacBook Air SuperDrive on any Mac
-sudo nvram boot-args="mbasd=1"
+# sudo nvram boot-args="mbasd=1"
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -223,7 +223,7 @@ defaults write com.apple.dock wvous-tr-corner -int 0
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
 # Bottom left screen corner → Display to sleep
-defaults write com.apple.dock wvous-bl-corner -int 10
+defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Bottom right screen corner
