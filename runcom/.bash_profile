@@ -10,12 +10,9 @@ CURRENT_SCRIPT=$BASH_SOURCE
 SCRIPT_PATH=$($READLINK "$CURRENT_SCRIPT")
 DOTFILES_DIR=$(dirname "$(dirname "$SCRIPT_PATH")")
 
-for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,completion,grep,prompt,nvm,rvm,git-completion.bash,custom}; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,completion,grep,prompt,nvm,git-completion.bash,custom}; do
     [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Clean up
 unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
