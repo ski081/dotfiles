@@ -1,4 +1,4 @@
-COMPUTER_NAME="Blade"
+#!/bin/bash
 
 # Ask for the administrator password upfront
 sudo -v
@@ -9,12 +9,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-
-# Set computer name (as done via System Preferences → Sharing)
-# sudo scutil --set ComputerName "$COMPUTER_NAME"
-# sudo scutil --set HostName "$COMPUTER_NAME"
-# sudo scutil --set LocalHostName "$COMPUTER_NAME"
-# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400

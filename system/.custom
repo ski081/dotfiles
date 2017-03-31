@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for al in `__git_aliases`; do
     alias g$al="git $al"
 

@@ -1,7 +1,6 @@
+#!/bin/bash
 
 # Personal folder/nav shortcuts
-alias lipa='cd ~/dev/LowesConsumer/LowesConsumeriPhoneApp/'
-alias lmdl='cd ~/dev/LowesConsumer/LowesConsumeriPhoneModel/'
 alias lrd='cd ~/dev/LowesConsumerRedesign/Lowes/'
 alias bcpd='cd ~/dev/BCP/mobile-app-properties/'
 alias bcpp='cd ~/dev/BCP/prod-config/mobile-app-properties/'
@@ -18,18 +17,18 @@ alias tp='top -o vsize' # Top processes
 
 # dir listing/traversal
 
-LS_COLORS=`is-supported "ls --color" --color -G`
-LS_TIMESTYLEISO=`is-supported "ls --time-style=long-iso" --time-style=long-iso`
-LS_GROUPDIRSFIRST=`is-supported "ls --group-directories-first" --group-directories-first`
+LS_COLORS=$(is-supported "ls --color" --color -G)
+LS_TIMESTYLEISO=$(is-supported "ls --time-style=long-iso" --time-style=long-iso)
+LS_GROUPDIRSFIRST=$(is-supported "ls --group-directories-first" --group-directories-first)
 
 # List in long format, include dotfiles, use unit suffixes, all entries
-alias l="ls -lahA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
+alias l='ls -lahA $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST'
 # Long format, all entries
-alias ll="ls -lA $LS_COLORS"
+alias ll='ls -lA $LS_COLORS'
 # List in long format, include dotfiles, use unit suffixes, all entries, sort descending by time modified
-alias lt="ls -lhAtr $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST"
+alias lt='ls -lhAtr $LS_COLORS $LS_TIMESTYLEISO $LS_GROUPDIRSFIRST'
 # List directories with total sizes
-alias ld="ls -ld $LS_COLORS */"
+alias ld='ls -ld $LS_COLORS */'
 # Sort files by size in a directory
 alias lss='ls -lhs'
 

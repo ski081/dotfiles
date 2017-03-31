@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Get current dir (so run this script from anywhere)
 
@@ -21,7 +21,9 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 
 # Package managers & packages
 
+# shellcheck source=/dev/null
 . "$DOTFILES_DIR/install/brew.sh"
+# shellcheck source=/dev/null
 . "$DOTFILES_DIR/install/bash.sh"
 
 # Install extra stuff

@@ -1,5 +1,8 @@
+#!/bin/bash
+
 if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
+    # shellcheck source=/dev/null
+    source ~/.bashrc
 fi
 
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles on distros without readlink and/or $BASH_SOURCE/$0)
@@ -11,6 +14,7 @@ SCRIPT_PATH=$($READLINK "$CURRENT_SCRIPT")
 DOTFILES_DIR=$(dirname "$(dirname "$SCRIPT_PATH")")
 
 for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,completion,grep,prompt,nvm,git-completion.bash,custom}; do
+    # shellcheck source=/dev/null
     [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 

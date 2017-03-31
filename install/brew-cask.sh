@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install Caskroom
 
 brew tap caskroom/cask
