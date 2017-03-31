@@ -18,5 +18,9 @@ for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,compl
     [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
+# Load RBENV
+
+eval "$(rbenv init -)"
+
 # Clean up
 unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE
