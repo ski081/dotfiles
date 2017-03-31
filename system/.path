@@ -2,6 +2,7 @@
 
 # Prepend new items to path (if directory exists)
 
+prepend-path "/Applications/Postgres.app/Contents/Versions/latest/bin"
 prepend-path "/bin"
 prepend-path "/usr/bin"
 prepend-path "/usr/local/bin"
