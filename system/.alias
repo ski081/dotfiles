@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Personal folder/nav shortcuts
-alias lrd='cd ~/dev/LowesConsumerRedesign/Lowes/'
-alias bcpd='cd ~/dev/BCP/mobile-app-properties/'
-alias bcpp='cd ~/dev/BCP/prod-config/mobile-app-properties/'
-alias olws='open ~/dev/LowesConsumerRedesign/Lowes/Lowes.xcworkspace'
-alias lws='cd ~/dev/LowesConsumerRedesign/Lowes/'
+alias dev='cd ~/dev/'
+alias ar='cd ~/dev/lowes/Measured'
+alias lrd='cd ~/dev/lowes/lowesconsumeriosapp/'
+alias bcpd='cd ~/dev/lowes/BCP/mobile-app-properties/'
+alias bcpp='cd ~/dev/lowes/BCP/prod-config/mobile-app-properties/'
 
 # System stuff
 alias ld="ls -ld */"   # List in long format, only directories
@@ -14,6 +14,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ql='qlmanage -p' # QuickLook
 alias tp='top -o vsize' # Top processes
+
+# rails
+alias rup="rails s -b 0.0.0.0"
 
 # dir listing/traversal
 
@@ -38,6 +41,18 @@ alias lss='ls -lhs'
 # alias gcr='git checkout dev/release/3.5.0'
 # alias gcp='git checkout dev/release/3.5.0;git pull origin dev/release/3.5.0'
 alias g='git'
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+
+alias got='git '
+alias get='git '
+
+# Delete git tag from remote
+alias gdt='git push --delete origin '
 
 # Xcode
 alias dvt='defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID'
