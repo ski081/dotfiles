@@ -5,6 +5,17 @@ function mk() {
   mkdir -p "$@" && cd "$@"
 }
 
+# =========== Git ================
+# create a new branch & switch to it
+function gcb() {
+  git checkout -b $*
+}
+
+# move to a branch
+function gco() {
+  git checkout $*
+}
+
 # Open man page as PDF
 function manpdf() {
  man -t "${1}" | open -f -a /Applications/Preview.app/
@@ -63,4 +74,22 @@ function prepend-path() {
 function_exists() {
     declare -f -F "$1" > /dev/null
     return $?
+}
+
+# =========== Git ================
+# open Xcode project inside current working directory
+function xc() {
+  project_file=$(find -E . -maxdepth 2 -regex ".*\.(xcodeproj|xcworkspace)$" | \
+    grep -v "xcodeproj/project.xcworkspace" | \
+    grep -v Pods | \
+    sort -r | \
+    head -1)
+
+  if [ -z "$project_file" ]
+  then
+    echo "Couldn't find a workspace or a project to open."
+  else
+    echo "Opening $project_file..."
+    open $project_file -a /Applications/Xcode.app
+  fi
 }

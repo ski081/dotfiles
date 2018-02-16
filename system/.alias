@@ -2,10 +2,12 @@
 
 # Personal folder/nav shortcuts
 alias dev='cd ~/dev/'
-alias ar='cd ~/dev/lowes/Measured'
-alias lrd='cd ~/dev/lowes/lowesconsumeriosapp/'
-alias bcpd='cd ~/dev/lowes/BCP/mobile-app-properties/'
+alias ar='cd ~/dev/lowes/apps/Measured'
+alias lrd='cd ~/dev/lowes/apps/lowesconsumeriosapp/'
+alias lnt='cd ~/dev/lowes/pods/ios-networking/'
+alias bcpd='cd ~/dev/lowes/BCP/dev-config/mobile-app-properties/'
 alias bcpp='cd ~/dev/lowes/BCP/prod-config/mobile-app-properties/'
+alias wiremock='cd ~/dev/wiremock/'
 
 # System stuff
 alias ld="ls -ld */"   # List in long format, only directories
@@ -14,9 +16,18 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ql='qlmanage -p' # QuickLook
 alias tp='top -o vsize' # Top processes
+alias cpwd='pwd | pbcopy' #copy working directory
+alias cpdir=cpwd #copy working directory
+
+#Finder
+alias o='open . &'
 
 # rails
 alias rup="rails s -b 0.0.0.0"
+
+#Processes
+alias tu='top -o cpu' # processes sorted by CPU
+alias tm='top -o vsize' # processes sorted by Memory
 
 # dir listing/traversal
 
@@ -74,3 +85,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 
 # Update App Store apps
 alias updateosx="sudo softwareupdate -i -a"
+
+alias reload="source ~/dotfiles/runcom/.bash_profile"
+alias edit='$EDITOR ~/dotfiles && reload'

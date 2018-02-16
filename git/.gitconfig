@@ -37,7 +37,7 @@
 [mergetool]
 	prompt = false
 [core]
-	editor = "atom -w"
+	editor = "code -w"
 	excludesfile = /Users/mstruzin/.gitignore_global
 [user]
 	name = Mark Struzinski
@@ -47,6 +47,7 @@
 	ff = only
 [diff]
 	tool = Kaleidoscope
+	colorMoved = zebra
 [alias]
   ci = commit
   st = status

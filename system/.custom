@@ -6,3 +6,11 @@ for al in `__git_aliases`; do
     complete_func=_git_$(__git_aliased_command $al)
     function_exists $complete_fnc && __git_complete g$al $complete_func
 done
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+if [ -f ~/bin/sensible.bash ]; then
+   source ../bin/sensible.bash
+fi
