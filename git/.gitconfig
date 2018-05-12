@@ -39,6 +39,7 @@
 [core]
 	editor = "code -w"
 	excludesfile = /Users/mstruzin/.gitignore_global
+	autocrlf = false
 [user]
 	name = Mark Struzinski
 	email = mark.struzinski@lowes.com

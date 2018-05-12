@@ -5,6 +5,11 @@ function mk() {
   mkdir -p "$@" && cd "$@"
 }
 
+# Simulator - kill and restart (mostly for playgrounds)
+function simfix() {
+    killall -9 -v com.apple.CoreSimulator.CoreSimulatorService
+}
+
 # =========== Git ================
 # create a new branch & switch to it
 function gcb() {
